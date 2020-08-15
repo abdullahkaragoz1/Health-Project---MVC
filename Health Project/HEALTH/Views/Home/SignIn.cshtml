@@ -1,0 +1,74 @@
+﻿
+<div class="container-fluid">
+    <div class="container">
+        <h2 class="text-center" id="title">Kayıt Ekranı </h2>
+        <p class="text-center">
+            @*<small id="passwordHelpInline" class="text-muted"> Developer: follow me on facebook <a href="https://www.facebook.com/JheanYu"> John niro yumang</a> inspired from <a href="https://p.w3layouts.com/">https://p.w3layouts.com/</a>.</small>*@
+        </p>
+        <hr>
+        <div class="row">
+            <div class="col-md-5">
+                <form role="form" method="post" action="register.php">
+                    <fieldset>
+                        <p class=" pull-center">Lütfen Aşağıdaki bilgileri eksiksiz doldurunuz.</p>
+
+                        <div class="form-group">
+                            <input type="text" name="username" id="username" class="form-control input-lg" placeholder="username">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="firstname" id="firstname" class="form-control input-lg" placeholder="firstname">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="lastname" id="lastname" class="form-control input-lg" placeholder="lastname">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="age" id="age" class="form-control input-lg" placeholder="age">
+                        </div>
+                        
+                        <div class="radio">
+                            <label><input type="radio" value="male">Male</label>
+                        </div>
+
+                        <div class="radio">
+                            <label><input type="radio" value="female">Female</label>
+                        </div>
+                        @*<div class="form-group">
+            Male <input type="radio" name="male" id="male" class="form-control input-lg" placeholder="male">
+
+        </div>*@
+
+                        <div class="form-group">
+                            <input type="text" name="bloodgroup" id="bloodgroup" class="form-control input-lg" placeholder="bloodgroup">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="recorddescription" id="recorddescription" class="form-control input-lg" placeholder="recorddescription">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
+                        </div>
+
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input">
+                                By Clicking register you're agree to our policy & terms
+                            </label>
+                        </div>
+
+
+                        <div>
+                            <input type="submit" class="btn btn-success btn-block" value="Register">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

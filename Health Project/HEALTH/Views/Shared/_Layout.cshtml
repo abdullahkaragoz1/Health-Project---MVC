@@ -1,0 +1,32 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/lib/bootstrap/bootstrap.css" rel="stylesheet" />
+
+
+    @RenderSection("customStyle",false)
+</head>
+<body>
+
+    <!--NavBar-->
+    @Html.Partial("_Navbar")
+    <!--NavBar-->
+
+
+    <div class="container">
+        @RenderBody()
+
+    </div>
+
+    <!-- Footer -->
+    @Html.Partial("_Footer")
+    <!-- Footer -->
+
+    <script src="~/Content/lib/jQuery/jquery-3.3.1.js"></script>
+    <script src="~/Content/lib/js/bootstrap.js"></script>
+    @RenderSection("customScript", false)
+</body>
+</html>

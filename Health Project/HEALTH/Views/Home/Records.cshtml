@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "İlan Sayfası";
+}
+
+
+<br />
+@*TABLE*@
+<h2>Eklenen Kayıtlar</h2>
+<div class="row">
+    <div class="col-12">
+        <table id="tbl-rec" class="table table-striped" cellspacing="0" align="center">
+            <thead class="thead-light">
+                <tr>
+                    <th>Id</th>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>Yaş</th>
+                    <th>Cinsiyet</th>
+                    <th>Kan Grubu</th>
+                    <th>Email Adres</th>
+                    <th>Açıklama</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+<script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+
+<script>
+    getall();
+
+    //Mevcut girilen kayıtları getirir
+    function getall() {
+        $('#tbl-rec').dataTable().fnDestroy();
+        $('#tbl-rec').DataTable({
+            "ajax": {
+                "url": '/Home/GetRecords',
+                "type": "get",
+                "datatype": "JSON"
+
+            },
+            "columns":
+                [
+                    { data: "Id" },
+                    { data: "FirstName" },
+                    { data: "LastName" },
+                    { data: "Age" },
+                    { data: "Gender" },
+                    { data: "BloodGroup" },
+                    { data: "EmailAdress" },
+                    { data: "RecordDescription" }
+                ]
+        });
+
+
+    }
+
+
+</script>

@@ -1,0 +1,44 @@
+﻿ <!--NavBar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    @*<a class="navbar-brand" href="#">COVID-19 BAĞIŞ</a>*@
+    <a href="@Url.Action("Index","Home")"><img src="~/Content/images/turkeylogo.png" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" style=" font-family:Verdana, Geneva, Tahoma, sans-serif">
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index","Home")">Anasayfa <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("About","Home")">Hakkımızda</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Contact","Home")">İletişim</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Records","Home")" style="color:#007bff">İhtiyaç Sahipleri</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Information","Home")" style="color:#28a745;">Nasıl Faydalanabilirim ?</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+
+
+            <button class="btn btn-outline-success my-2 my-sm-0" id="girisYap" type="button" onclick="@("window.location.href='" + @Url.Action("Login", "Home") + "'");">Giriş Yap</button>
+
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="@("window.location.href='" + @Url.Action("SignIn", "Home") + "'");">Kayıt Ol</button>
+
+        </form>
+    </div>
+
+
+
+</nav>
+<!--NavBar-->
